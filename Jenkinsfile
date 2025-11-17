@@ -15,7 +15,7 @@ pipeline {
         stage('Artifact build') {
             steps {
                 echo "********** building is done ************"
-                dir('Calculator-demo/calculator/target') {
+                dir('Calculator-demo/calculator') {
                     sh 'mvn clean package -DskipTests -Dcyclonedx.skip=true -Dcheckstyle.skip=true'
                 }
             }
