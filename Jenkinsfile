@@ -37,9 +37,11 @@ pipeline {
                 label 'worker-slave'
             } 
             steps {
+                 sh 'mkdir -p target'
                 // Unstash artifacts on the slave node
                 unstash 'java-artifact'
                 unstash 'Dockerfile'
+                sh 'mv calculator-0.0.1-SNAPSHOT.jar target/'
                 sh 'docker build -t devi819/calculator:v1 .'
             }
         }
