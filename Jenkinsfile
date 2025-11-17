@@ -7,7 +7,7 @@ pipeline {
         stage('checkout') {
             steps {
                 echo "*********** cloning the code **********"
-                sh 'rm -rf Calci || true'
+                sh 'rm -rf Calculator-demo || true'
                 sh 'git clone https://github.com/SivadeviAluri/Calculator-demo.git'    
             }
         }
