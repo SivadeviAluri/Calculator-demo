@@ -40,7 +40,7 @@ pipeline {
                 // Unstash artifacts on the slave node
                 unstash 'java-artifact'
                 unstash 'Dockerfile'
-                sh 'docker build -t devi/calculator:v1 .'
+                sh 'docker build -t devi819/calculator:v1 .'
             }
         }
         
